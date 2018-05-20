@@ -1,5 +1,7 @@
 # import logging
 # from logging.handlers import RotatingFileHandler
+import sys
+print(sys.version)
 
 from flask import Flask
 
