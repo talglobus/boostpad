@@ -316,3 +316,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+### Configuration files and credentials
+config/

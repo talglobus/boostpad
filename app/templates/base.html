@@ -15,14 +15,26 @@
 	{% else %}
 	<title>Boostpad</title>
 	{% endif %}
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+	<link rel="manifest" href="/static/site.webmanifest">
+	<link rel="mask-icon" href="/static/img/safari-pinned-tab.svg" color="#0c56a8">
+	<link rel="shortcut icon" href="/static/img/favicon.ico">
+	<meta name="apple-mobile-web-app-title" content="BoostPad">
+	<meta name="application-name" content="BoostPad">
+	<meta name="msapplication-TileColor" content="#0c56a8">
+	<meta name="msapplication-config" content="/static/browserconfig.xml">
+	<meta name="theme-color" content="#0c56a8">
 </head>
 <body>
 	<nav>
-		<h4><a href="/index">Boostpad</a></h4>
+		<h4><a href="/index">BoostPad</a></h4>
 	</nav>
 	<section class="content">
 		{% block content %}{% endblock %}
 	</section>
 	<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+	<a href="https://www.iubenda.com/privacy-policy/99249610" class="iubenda-white iubenda-embed " title="Privacy Policy">Privacy Policy</a> <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 </body>
 </html>
