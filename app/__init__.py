@@ -1,5 +1,5 @@
-import logging
-from logging.handlers import RotatingFileHandler
+# import logging
+# from logging.handlers import RotatingFileHandler
 
 from flask import Flask
 
@@ -8,6 +8,6 @@ app = Flask(__name__)
 
 from app import routes
 
-handler = RotatingFileHandler('boostedlogs.log', maxBytes=10000, backupCount=1)
-handler.setLevel(logging.INFO)
-app.logger.addHandler(handler)
+# handler = RotatingFileHandler('boostedlogs.log', maxBytes=10000, backupCount=1)
+# handler.setLevel(logging.INFO)
+# app.logger.addHandler(handler)
