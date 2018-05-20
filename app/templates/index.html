@@ -3,5 +3,34 @@
   ~ © 2018 Tal Globus. All Rights Reserved.
   -->
 {% block content %}
-	<h1>Hello, {{ user.username }}!!</h1>
+<!-- Include Facebook -->
+<div id="fb-root"></div>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '{{ config.appID }}',
+			xfbml      : true,
+			version    : 'v3.0'
+		});
+		FB.AppEvents.logPageView();
+		FB.Event.subscribe('auth.login', function () {
+			alert("Sup");
+			window.location = "https://localhost:5000/start";
+		});
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- Log in with Facebook button -->
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false"
+	 data-auto-logout-link="false" data-use-continue-as="true"></div>
+
+<!-- Check login? -->
 {% endblock %}

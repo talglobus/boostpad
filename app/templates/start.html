@@ -3,30 +3,29 @@
   ~ © 2018 Tal Globus. All Rights Reserved.
   -->
 {% block content %}
-<!-- Include Facebook -->
-<div id="fb-root"></div>
-<script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '{{ config.appID }}',
-			xfbml      : true,
-			version    : 'v3.0'
-		});
-		FB.AppEvents.logPageView();
-	};
+	<h1>The server says you're {{ user.username }}, but the client says you're <span id="name">Nobody</span>!</h1>
+	<script>
+		function post(endpoint, data) {
+			xhttp.open("POST", endpoint, true);
+			xhttp.setRequestHeader("Content-type", "application/json");
+			xhttp.send(data);
+		}
 
-	(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "https://connect.facebook.net/en_US/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Log in with Facebook button -->
-<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false"
-	 data-auto-logout-link="false" data-use-continue-as="true"></div>
-
-<!-- Check login? -->
+		function submitDemo() {
+			let data = {
+				location: [[37.3686537, -122.0751558], [37.6386321, -122.0863322]],
+				cost: 1350,
+				features: {
+					'air_conditioning': true,
+					'refrigerator': true,
+					'dishwasher': true,
+					'central_heating': true
+				},
+				name: "Yan Min Hong"
+			};
+			post('/api/lcf', data);
+			console.log("Sent LCF");
+		}
+	</script>
+	<button onclick="submitDemo">Test First Layer</button>
 {% endblock %}

@@ -11,7 +11,7 @@
 <head>
 	<meta charset="UTF-8">
 	{% if title %}
-	<title>{{ title }} - Boostpad</title>
+	<title>{{ title }} | Boostpad</title>
 	{% else %}
 	<title>Boostpad</title>
 	{% endif %}
@@ -41,7 +41,12 @@
 	<section class="content">
 		{% block content %}{% endblock %}
 	</section>
+	<a href="https://www.iubenda.com/privacy-policy/99249610" class="iubenda-white iubenda-embed " title="Privacy Policy">Privacy Policy</a>
+	<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
+	<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
 	<script src="{{ url_for('static', filename='js/index.js') }}"></script>
-	<a href="https://www.iubenda.com/privacy-policy/99249610" class="iubenda-white iubenda-embed " title="Privacy Policy">Privacy Policy</a> <script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
 </body>
 </html>
