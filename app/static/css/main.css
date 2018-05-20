@@ -1,0 +1,45 @@
+/*
+ * © 2018 Tal Globus. All Rights Reserved.
+ */
+
+body {
+	margin: 0 !important;
+	padding: 0;
+}
+
+nav {
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 40px;
+}
+
+nav > h4 {
+	padding: 8px 0 14px 8px;
+}
+
+nav > h4 > a {
+	color: white;
+	font-size: 18px;
+	text-decoration: none;
+	font-family: Helvetica, sans-serif;
+}
+
+.content {
+
+}
+
+h4 {
+	margin: 0;
+}
+
+/* Game: */
+#game {
+	margin: 0 auto 0 auto;
+}
+
+.game-container {
+	background-color: rgba(20, 20, 220, 0.6);
+	width: 100%;
+	height: 800px;
+	/*height: calc(100% - 40px);*/
+}

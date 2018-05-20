@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+  ~ © 2018 Tal Globus. All Rights Reserved.
+  -->
+
+<!--
+  ~ © 2018 Tal Globus. All Rights Reserved.
+  -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% if title %}
+	<title>{{ title }} - Boostpad</title>
+	{% else %}
+	<title>Boostpad</title>
+	{% endif %}
+</head>
+<body>
+	<nav>
+		<h4><a href="/index">Boostpad</a></h4>
+	</nav>
+	<section class="content">
+		{% block content %}{% endblock %}
+	</section>
+	<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
